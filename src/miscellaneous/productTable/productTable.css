@@ -1,0 +1,55 @@
+.productTable{
+    /* width: 100%; */
+    display: flex;
+}
+.productTable .headCell{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.productTable .tableCell{
+    font-size: 1.3rem;
+    width: max-content;
+    margin: 0;
+}
+.productTable .quantCell{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: crimson;
+}
+.productTable .cellWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.productTable .image{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.productTable .prodname{
+   display: flex;
+   flex-direction: column;
+   gap: 0.3rem;
+   align-items: start;
+   justify-content: center;
+   margin: 0;
+   width: fit-content;
+}
+.productTable .ptitle{
+   font-size: 1.3rem;
+   font-weight: 700;
+   padding: 0;
+}
+.productTable .prem{
+    padding: 0;
+   font-size: 1rem;
+   font-weight: 300;
+   color: rgb(141, 140, 140);
+}
+.productTable .lowCell{
+   font-size: 1.3rem;
+   color: crimson;
+}

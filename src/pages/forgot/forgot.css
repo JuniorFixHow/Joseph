@@ -1,0 +1,84 @@
+.forgot{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #575DFB;
+    gap: 3rem;
+}
+
+.forgot .title{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.forgot .center{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot .top{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot .text{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.forgot .inputbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.forgot .box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid #575DFB;
+    padding: 0.2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.forgot input{
+    font-size: 1.3rem;
+    padding: 0.1rem;
+    border: none;
+}
+.forgot input::placeholder{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.forgot .icon{
+    color: grey;
+}
+
+.forgot button{
+    background-color: #575DFB;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+.forgot button:hover{
+    background-color: #8387fa;
+}

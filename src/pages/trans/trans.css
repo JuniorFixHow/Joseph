@@ -1,0 +1,128 @@
+.trans{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    align-items: start;
+    /* justify-content: center; */
+}
+
+.trans .top{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.trans .heads{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-self: start;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.trans .onehead{
+    cursor: pointer;
+}
+.trans .onehead_{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.trans .card{
+    background-color: #12b7af;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.trans .card1{
+    background-color: #21bdd8;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.trans .card2{
+    background-color: #13a1f3;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.trans .ptitle{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.trans .pquant{
+    text-align: center;
+    font-size: 1.5rem;
+    color: antiquewhite;
+    /* font-weight: 700; */
+}
+
+.trans .middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+.trans .down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.trans .sales{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.trans .addTrans{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.trans .addTrans button{
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 1rem;
+    background-color: #1366D9;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.4rem;
+}

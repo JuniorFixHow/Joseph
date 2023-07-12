@@ -1,0 +1,26 @@
+.transTable{
+    width: 100%;
+}
+.transTable .cust{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: start;
+}
+.transTable .custphone{
+    font-size: 0.8rem;
+}
+
+.transTable .cellWithImg{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.transTable .cellImg{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}

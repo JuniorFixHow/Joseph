@@ -1,0 +1,126 @@
+.userModal{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userModal .newProd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+.userModal .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+.userModal .title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-self: start;
+}
+.userModal .box-new{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.userModal .icon{
+    font-size: 8rem;
+    padding: 3rem;
+    border: 4px dashed lightgray;
+    align-self: start;
+}
+.userModal .boxtop{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: lightgray;
+    font-size: 1.2rem;
+}
+.userModal .drag{
+    color: #448DF2;
+    cursor: pointer;
+}
+
+.userModal .middle{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-self: center;
+    gap: 1rem;
+    width: 100%;
+}
+.userModal .oneinput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+.userModal .oneinp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    width: 100%;
+}
+.userModal .check{
+    align-self: center;
+}
+.userModal .text{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.userModal input{
+    font-size: 1.2rem;
+    border: 1px solid #D0D5DD;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+.userModal input::placeholder{
+    color:  #D0D5DD;
+    font-size: 0.9rem;
+}
+.userModal .down{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.userModal .disc{
+    border: 1px solid #858D9D;
+    color: #858D9D;
+    padding: 0.6rem 1.4rem;
+    background: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.userModal .sub{
+    border: none;
+    padding: 0.7rem 1.4rem;
+    background-color: #1366D9;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: #fff;
+}
+.userModal .proimage{
+    height: 8rem;
+    width: 7rem;
+    border-radius: 0.5rem;
+    object-fit:fill;
+}

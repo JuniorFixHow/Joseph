@@ -1,0 +1,163 @@
+.singleSupplier{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem 0 0 2rem;
+    margin: 1rem 0 1rem 0;
+    height: 100%;
+}
+
+.singleSupplier .top{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background-color: #fff;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    justify-content: center;
+    width: 85%;
+}
+.singleSupplier .topleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    padding: 0.1rem;
+    border-radius: 0.3rem;
+    align-self: start;
+}
+.singleSupplier .topleft img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 0.2rem;
+    object-fit: cover;
+}
+
+.singleSupplier .topright{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.singleSupplier .topright .name{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.singleSupplier .topright .cat{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: darkgray;
+}
+.singleSupplier .topright .others{
+    font-size: 1rem;
+    color: darkgray;
+}
+.singleSupplier .topright .order{
+    background-color: #1366D9;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.singleSupplier .middle{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    justify-content: center;
+    width: 85%;
+    align-items: center;
+}
+
+.singleSupplier .title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    align-self: start;
+}
+.singleSupplier .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-self: start;
+}
+.singleSupplier .oneinput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+.singleSupplier .lab{
+    text-align: left;
+    align-self: start;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.singleSupplier .put{
+    padding: 0.4rem 0.5rem;
+    border: 1px solid rgb(221, 220, 220);
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+}
+.singleSupplier .put::placeholder{
+    color: rgb(180, 180, 180);
+    font-size: 1rem;
+}
+
+.singleSupplier .proceed{
+    background-color: #1366D9;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.singleSupplier .close{
+    border: 1px solid #1366D9;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    color: #1366D9;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: none;
+
+    align-self: flex-start;
+}
+.singleSupplier .butts{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+}
+.singleSupplier .wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.singleSupplier .ord{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.singleSupplier .new{
+    background-color: #1366D9;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* align-self: flex-start; */
+}

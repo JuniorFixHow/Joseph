@@ -1,0 +1,46 @@
+.inventTable{
+    width: 100%;
+}
+.inventTable .cellWithImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventTable .cellImg{
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.inventTable .actions{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   margin-left: 2rem;
+}
+.inventTable .edit{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color: teal;
+   padding: 0.2rem 1rem;
+   color: aliceblue;
+   font-weight: bold;
+   border-radius: 0.3rem;
+   cursor: pointer;
+}
+.inventTable .delete{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color: crimson;
+   padding: 0.2rem 1rem;
+   color: aliceblue;
+   font-weight: bold;
+   border-radius: 0.3rem;
+   cursor: pointer;
+}

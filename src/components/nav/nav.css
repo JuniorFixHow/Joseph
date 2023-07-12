@@ -1,0 +1,94 @@
+.nav{
+    background-color: #101540;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 0.5rem 2rem 0.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100%;
+}
+
+.nav .btop{
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .top{
+    flex-direction: column;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.nav .onedash{
+    flex-direction: row;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.3rem;
+    color: rgb(159, 165, 170);
+    font-weight: 500;
+    cursor: pointer;
+}
+.nav .onedasha{
+    flex-direction: row;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.3rem;
+    color: aliceblue;
+    font-weight: 500;
+    cursor: pointer;
+}
+.nav .lastdash{
+    flex-direction: row;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.3rem;
+    color: rgb(159, 165, 170);
+    font-weight: 500;
+    cursor: pointer;
+    align-self: start;
+    margin-left: 1rem;
+    margin-top: 5rem;
+}
+.nav .lastdash:hover{
+    color: aliceblue;
+}
+.nav .onedash:hover{
+    color: aliceblue;
+}
+.nav .lastdasha{
+    flex-direction: row;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.3rem;
+    color: aliceblue;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: start;
+    margin-left: 1rem;
+}
+.nav .lastdasha:hover{
+    color: aliceblue;
+}
+
+.nav img{
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}

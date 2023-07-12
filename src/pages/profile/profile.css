@@ -1,0 +1,101 @@
+.profile{
+    width: 90%;
+    margin: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 2rem;
+}
+
+.profile .top{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    /* flex-wrap: wrap; */
+    position: relative;
+    display: flex;
+}
+
+.profile img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile label{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.profile .down{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.profile .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.profile .oneinput{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.profile .oneinput input{
+    padding: 0.4rem 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+}
+.profile  input::placeholder{
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(155, 155, 155);
+}
+.profile .oneinput .name{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.profile .save {
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 1rem;
+    background-color: #1366D9;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    align-self: flex-end;
+}
+
+.profile .change{
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 1rem;
+    background-color: orange;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    width: 100%;
+    transition: 1s;
+}
+
+.profile .change:hover{
+    background-color: rgb(179, 117, 4);
+}

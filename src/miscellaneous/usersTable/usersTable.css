@@ -1,0 +1,27 @@
+.usersTable{
+    width: fit-content;
+}
+.usersTable .cust{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: start;
+}
+.usersTable .custphone{
+    font-size: 0.8rem;
+}
+
+.usersTable .cellWithImg{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    /* cursor: pointer; */
+}
+.usersTable .cellImg{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}

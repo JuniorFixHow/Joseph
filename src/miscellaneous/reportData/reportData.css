@@ -1,0 +1,28 @@
+.reportData{
+    /* width: 100%; */
+    display: flex;
+}
+.reportData .headCell{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.reportData .tableCell{
+    font-size: 1.3rem;
+    width: max-content;
+    margin: 0;
+}
+
+.reportData .cellWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.reportData .image{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+

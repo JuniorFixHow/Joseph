@@ -1,0 +1,62 @@
+footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+footer .foot{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    height: 15rem;
+    background-color: #283646;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+footer .one{
+    flex-direction: column;
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer .title{
+    color: #3A86FF;
+    font-size: 1.3rem;
+}
+
+footer .down{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+footer .item{
+    font-size: 1.1rem;
+    color: gainsboro;
+}
+
+footer .item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+footer .two{
+    display: flex;
+    align-self:self-end;   
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: gainsboro;
+}
+
+footer .policy:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
