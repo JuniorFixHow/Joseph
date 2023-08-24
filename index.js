@@ -23,10 +23,7 @@ mongoose.connection.on('disconnected', ()=>{
     console.log('Mongo is disconnected')
 })
 
-app.use("*",cors({
-    origin:true,
-    credentials:true,
-}))
+app.use(cors())
 app.use(express.json());
 app.use(cookieParser())
 
