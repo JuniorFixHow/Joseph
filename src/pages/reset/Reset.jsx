@@ -3,6 +3,7 @@ import './reset.css';
 import {BsPencil} from 'react-icons/bs';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import {baseURL} from '../../utils/functions/funtions'
 
 const Reset = () => {
     const {state} = useLocation();
@@ -37,7 +38,7 @@ const Reset = () => {
         else{
             try {
                 const data = {email:state.email, password};
-                const update = await axios.put(`/users/change/${state.id}`, data);
+                const update = await axios.put(`${baseURL}/users/change/${state.id}`, data);
                 setError('');
                 setSuccess(update.data);
                 setLoading(false);

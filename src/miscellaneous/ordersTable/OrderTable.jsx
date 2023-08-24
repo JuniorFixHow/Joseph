@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const OrderTable = ({OrderData, filtered}) => {
     const {searchItem} = useContext(SearchContext);
@@ -21,7 +22,7 @@ export const OrderTable = ({OrderData, filtered}) => {
         setDeleteLoading(true);
         setCurrentOrder(id)
         try {
-            await axios.delete(`/orders/delete/${id}`);
+            await axios.delete(`${baseURL}/orders/delete/${id}`);
             setDeleteLoading(false);
             setCurrentOrder(null)
         } catch (error) {
@@ -36,7 +37,7 @@ export const OrderTable = ({OrderData, filtered}) => {
         setCurrentOrder(id)
         const data = {sup, quantity, name}
         try {
-            await axios.post(`/orders/cancel/`, data);
+            await axios.post(`${baseURL}/orders/cancel/`, data);
             setDeleteLoading(false);
             setCurrentOrder(null)
         } catch (error) {

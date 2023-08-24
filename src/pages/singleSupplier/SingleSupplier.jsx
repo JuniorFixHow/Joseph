@@ -5,6 +5,7 @@ import { OrderTable } from '../../miscellaneous/ordersTable/OrderTable';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const SingleSupplier = () => {
     const {user} = useContext(AuthContext);
@@ -37,14 +38,14 @@ export const SingleSupplier = () => {
 
     useEffect(()=>{
         const fetchSuppliers = async()=>{
-            const sups = await axios.get('/suppliers');
+            const sups = await axios.get(baseURL+'/suppliers');
             setSuppliers(sups.data);
         }
         fetchSuppliers();
     },[])
     useEffect(()=>{
         const fetchOrders = async()=>{
-            const ords = await axios.get('/orders');
+            const ords = await axios.get(baseURL+'/orders');
             if(state){
                 // console.log(ords.data.filter(order=>order.sup._id === state.id))
                 setFiltered(ords.data.filter(order=>order.sup._id === state.id).sort((a, b)=>a.createdAt < b.createdAt ? 1 : -1));
@@ -77,7 +78,7 @@ export const SingleSupplier = () => {
                 const data = {
                     name, sup: state?.id || sup, quantity, desc
                 }
-                const res = await axios.post(`/orders/create`, data);
+                const res = await axios.post(`${baseURL}/orders/create`, data);
                 setLoading(false);
                 setError('');
                 setSuccess(res.data);

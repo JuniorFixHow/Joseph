@@ -4,6 +4,7 @@ import {BsPencil} from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 const Profile = () => {
     const {user} = useContext(AuthContext);
@@ -38,7 +39,7 @@ const Profile = () => {
                 pic:url || 'https://toppng.com/uploads/preview/user-account-management-logo-user-icon-11562867145a56rus2zwu.png'
             }
 
-            const update = await axios.put(`/users/update/${user.details._id}`, data);
+            const update = await axios.put(`${baseURL}/users/update/${user.details._id}`, data);
             setError('');
             setSuccess(update.data);
             setLoading(false);

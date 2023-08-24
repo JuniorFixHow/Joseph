@@ -2,6 +2,7 @@ import { Modal } from '@mui/material'
 import React, { useRef, useState } from 'react';
 import './newSupplier.css';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 const NewSupplier = ({showNew, setShowNew, photos, setPhotos}) => {
 
@@ -51,7 +52,7 @@ const NewSupplier = ({showNew, setShowNew, photos, setPhotos}) => {
                     pic:url || 'https://icon-library.com/images/supplier-icon-png/supplier-icon-png-9.jpg'
                 }
                
-                await axios.post('/suppliers/create', data);
+                await axios.post(baseURL+'/suppliers/create', data);
                 setLoading(false);
                 setError('')
                 setSuccess('Done!');

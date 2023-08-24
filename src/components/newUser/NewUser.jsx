@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import {LuBoxSelect} from 'react-icons/lu';
 import './newUser.css';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 const NewUser = ({showNew, setShowNew}) => {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -23,7 +24,7 @@ const NewUser = ({showNew, setShowNew}) => {
         if(fullname !=='' && email!=='' && phone!==''){
             try {
                 const data = {fullname, email, phone, isAdmin}
-                const user = await axios.post('/auths/create', data);
+                const user = await axios.post(baseURL+'/auths/create', data);
                 setError('');
                 setSuccess(user.data);
                 setLoading(false);

@@ -21,7 +21,7 @@ const Signin = () => {
     if(email !=='' && password !== ''){
       const data ={email, password};
       try {
-        const res = await axios.post('/auths/login', data);
+        const res = await axios.post(baseURL+'/auths/login', data);
         // console.log(res)
         dispatch({type:'LOGIN_SUCCESS', payload: res.data});
         navigate('/')

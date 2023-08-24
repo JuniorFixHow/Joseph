@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const InventoryTable = ({setShowEdit, setCurrentProduct}) => {
     const {user} = useContext(AuthContext);
@@ -15,7 +16,7 @@ export const InventoryTable = ({setShowEdit, setCurrentProduct}) => {
       setDeleteLoading(true);
       setCurrentDelete(id);
       try {
-        await axios.delete(`/products/delete/${id}`)
+        await axios.delete(`${baseURL}/products/delete/${id}`)
         rows.filter(row=> row._id !== id);
         setDeleteLoading(false);
         setCurrentDelete(null);
@@ -32,7 +33,7 @@ export const InventoryTable = ({setShowEdit, setCurrentProduct}) => {
     }
     useEffect(()=>{
       const fetchProducts = async ()=>{
-        const prod = await axios.get('/products');
+        const prod = await axios.get(baseURL+'/products');
         setRows(prod.data);
       }
       fetchProducts();

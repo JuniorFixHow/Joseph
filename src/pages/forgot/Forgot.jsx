@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './forgot.css';
 import {MdAlternateEmail} from 'react-icons/md';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 const Forgot = () => {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Forgot = () => {
     if(email !==''){
       try {
         const data = {email};
-        const req = await axios.post('/reset/create', data);
+        const req = await axios.post(baseURL+'/reset/create', data);
         setLoading(false);
         setError('')
         setSuccess(req.data);

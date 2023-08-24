@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import {AiOutlineReload} from 'react-icons/ai';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const UsersTable = () => {
     const {searchItem} = useContext(SearchContext);
@@ -14,7 +15,7 @@ export const UsersTable = () => {
 
     useEffect(()=>{
         const fetchUsers = async()=>{
-            const users = await axios.get('/users');
+            const users = await axios.get(baseURL+'/users');
             setRows(users.data.sort((a, b)=>a.createdAt < b.createdAt ? 1:-1));
         }
         fetchUsers()
@@ -24,7 +25,7 @@ export const UsersTable = () => {
         setCurrentUser(id);
         setDeleteLoading(true);
         try {
-            await axios.delete(`/users/delete/${id}`);
+            await axios.delete(`${baseURL}/users/delete/${id}`);
             setCurrentUser(null);
             setDeleteLoading(false);
         } catch (error) {

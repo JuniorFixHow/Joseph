@@ -5,6 +5,7 @@ import { DashProduct, DashTresh } from '../../miscellaneous/productTable/Product
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 const Home = () => {
   const {user} = useContext(AuthContext);
@@ -15,11 +16,11 @@ const Home = () => {
 
   useEffect(()=>{
     const getProducts = async()=>{
-      const prods = await axios.get('/products');
+      const prods = await axios.get(baseURL+'/products');
       setProducts(prods.data);
     }
     const getSales = async()=>{
-      const prods = await axios.get('/sales');
+      const prods = await axios.get(baseURL+'/sales');
       setSales(prods.data);
     }
     getProducts();

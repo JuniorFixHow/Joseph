@@ -13,6 +13,7 @@ import {
   Bar
 } from 'recharts';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 
 
@@ -68,7 +69,7 @@ export const BarGraph = () => {
   useEffect(()=>{
     const fetchRecords =  async() =>{
       let list = [];
-      const prods = await axios.get('/products');
+      const prods = await axios.get(baseURL+'/products');
       prods.data.forEach(prod=>{
         // console.log(prod)
         const date = new Date(prod.updatedAt);
@@ -76,7 +77,7 @@ export const BarGraph = () => {
         const t= prod.cost * prod.quantity;
         list.push({Purchases:t, name:d, Sales:0})
       });
-      const sales = await axios.get('/sales');
+      const sales = await axios.get(baseURL+'/sales');
       sales.data.forEach(sale=>{
         const date = new Date(sale.updatedAt);
         const d = date.toDateString().split(' ')[1]+'/'+date.toDateString().split(' ')[3];

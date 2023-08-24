@@ -57,7 +57,7 @@ const NewProduct = ({showNew, setShowNew, photos, setPhotos}) => {
                     cost,
                     pic:url || 'https://cdn3d.iconscout.com/3d/premium/thumb/product-5806313-4863042.png'
                 }
-                const product = await axios.post(`/products/create`, prodData);
+                const product = await axios.post(`${baseURL}/products/create`, prodData);
                 console.log(product.data);
                 setLoading(false);
                 setError('');

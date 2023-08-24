@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './newTrans.css';
 import axios from 'axios';
 import {AuthContext} from '../../context/AuthContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 const NewTrans = ({setShowNewTrans, currentTransData, setCurrentTransData}) => {
     const {user} = useContext(AuthContext)
@@ -17,7 +18,7 @@ const NewTrans = ({setShowNewTrans, currentTransData, setCurrentTransData}) => {
 
     useEffect(()=>{
         const getProducts = async()=>{
-            const data = await axios.get('/products');
+            const data = await axios.get(baseURL+'/products');
             setProducts(data.data);
         }
         getProducts();
@@ -31,7 +32,7 @@ const NewTrans = ({setShowNewTrans, currentTransData, setCurrentTransData}) => {
         if(customer !=='' && quantity !=='' && product !==''){
             try {
                 const data = {phone, customer, address, product, quantity, seller: user.details._id}
-                const res =  await axios.post('/sales/create', data);
+                const res =  await axios.post(baseURL+'/sales/create', data);
                 setLoading(false);
                 setError('');
                 setSuccess(res.data);
@@ -63,7 +64,7 @@ const NewTrans = ({setShowNewTrans, currentTransData, setCurrentTransData}) => {
                 product: product !=='' ? product : currentTransData.product,
                 quantity: quantity !=='' ? quantity : currentTransData.quantity,
             }
-            const update = await axios.put(`/sales/update/${currentTransData._id}`, data);
+            const update = await axios.put(`${baseURL}/sales/update/${currentTransData._id}`, data);
             setLoading(false);
             setError('');
             setSuccess(update.data);

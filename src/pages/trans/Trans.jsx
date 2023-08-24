@@ -4,6 +4,7 @@ import NewTrans from '../../components/newTrans/NewTrans';
 import { TransTable } from '../../miscellaneous/transTable/TransTable';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 const Trans = () => {
 const {user} = useContext(AuthContext);
@@ -17,7 +18,7 @@ const {user} = useContext(AuthContext);
 
   useEffect(()=>{
     const fetchSales = async()=>{
-        const sales = await axios.get('/sales');
+        const sales = await axios.get(baseURL+'/sales');
         setToday(sales.data.filter(item=> new Date(item.createdAt).toLocaleDateString() === new Date().toLocaleDateString() ));
         setPrev(sales.data.filter(item=> new Date(item.createdAt).toLocaleDateString() < new Date().toLocaleDateString() ));
         setAll(sales.data);

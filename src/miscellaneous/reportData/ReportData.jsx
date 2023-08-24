@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './reportData.css';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const ReportData = () => {
   const {searchItem} = useContext(SearchContext);
@@ -13,8 +14,8 @@ export const ReportData = () => {
   }
   useEffect(()=>{
     const getProducts = async()=>{
-      const prods = await axios.get('/products');
-      const sal = await axios.get('/sales');
+      const prods = await axios.get(baseURL+'/products');
+      const sal = await axios.get(baseURL+'/sales');
       setProducts(prods.data.sort((a, b)=> getOccurances(sal.data, a.name) < getOccurances(sal.data, b.name) ? 1:-1).slice(0, 6));
     }
    

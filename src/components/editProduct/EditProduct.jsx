@@ -2,6 +2,7 @@ import { Modal } from '@mui/material'
 import React, { useRef, useState } from 'react';
 import './editProduct.css';
 import axios from 'axios';
+import { baseURL } from '../../utils/functions/funtions';
 
 const EditProduct = ({showEdit, setShowEdit, currentProduct}) => {
     const [name, setName] = useState('');
@@ -55,7 +56,7 @@ const handleUpdateProduct = async(e)=>{
             quantity: quantity!=='' ? quantity : currentProduct.quantity,
             pic: url ? url : currentProduct.pic,
         }
-        await axios.put(`/products/update/${currentProduct._id}`, data);
+        await axios.put(`${baseURL}/products/update/${currentProduct._id}`, data);
         setLoading(false)
         setSuccess('Done updating')
         setError('')

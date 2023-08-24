@@ -6,6 +6,7 @@ import axios from 'axios';
 import {BsFillPencilFill} from 'react-icons/bs';
 import {AiOutlineReload} from 'react-icons/ai';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const TransTable = ({setCurrentTransData, setShowNewTrans, currentHead}) => {
   const {searchItem} = useContext(SearchContext);
@@ -23,7 +24,7 @@ export const TransTable = ({setCurrentTransData, setShowNewTrans, currentHead}) 
       setDeleteLoading(true);
       setCurrentTrans(id);
       try {
-        await axios.delete(`/sales/delete/${id}`);
+        await axios.delete(`${baseURL}/sales/delete/${id}`);
         setDeleteLoading(false);
         setCurrentTrans(null);
       } catch (error) {
@@ -35,7 +36,7 @@ export const TransTable = ({setCurrentTransData, setShowNewTrans, currentHead}) 
     useEffect(()=>{
       const fetchSales = async()=>{
         try {
-          const sales = await axios.get('/sales');
+          const sales = await axios.get(baseURL+'/sales');
           setRows(sales.data.sort((a, b)=>a.createdAt < b.createdAt ? 1:-1).filter(item=>
             new Date().toLocaleDateString() === new Date(item.createdAt).toLocaleDateString()
             ))

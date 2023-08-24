@@ -6,6 +6,7 @@ import {AiOutlineReload} from 'react-icons/ai';
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const ResetTable = () => {
     const {searchItem} = useContext(SearchContext);
@@ -17,7 +18,7 @@ export const ResetTable = () => {
         setDeleteLoading(true);
         setCurrentReset(id);
         try {
-            await axios.post(`/reset/delete`, {email})
+            await axios.post(`${baseURL}/reset/delete`, {email})
             setDeleteLoading(false);
             setCurrentReset(null);
         } catch (error) {
@@ -30,7 +31,7 @@ export const ResetTable = () => {
     useEffect(()=>{
         const fetchRequests = async() =>{
             try {
-                const reqs = await axios.get('/reset');
+                const reqs = await axios.get(baseURL+'/reset');
                 setRequests(reqs.data.sort((a, b)=>a.createdAt < b.createdAt ? 1:-1));
             } catch (error) {
                 console.log(error)

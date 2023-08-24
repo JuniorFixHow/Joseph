@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import {AiOutlineReload} from 'react-icons/ai';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const SuppliersTable = () => {
     const {searchItem} = useContext(SearchContext);
@@ -16,7 +17,7 @@ export const SuppliersTable = () => {
     const navigate = useNavigate();
     useEffect(()=>{
         const fetchSuppliers = async ()=>{
-            const sups = await axios.get('/suppliers');
+            const sups = await axios.get(baseURL+'/suppliers');
             setRows(sups.data);
           }
           fetchSuppliers();
@@ -26,7 +27,7 @@ export const SuppliersTable = () => {
         setDeleteLoading(true);
         setCurrentDelete(id);
         try {
-            await axios.delete(`/suppliers/delete/${id}`)
+            await axios.delete(`${baseURL}/suppliers/delete/${id}`)
             setDeleteLoading(false);
             setCurrentDelete(null);
         } catch (error) {

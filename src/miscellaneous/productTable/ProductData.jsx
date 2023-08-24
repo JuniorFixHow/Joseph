@@ -9,6 +9,7 @@ import './productTable.css';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContext';
+import { baseURL } from '../../utils/functions/funtions';
 
 export const DashProduct = () => {
   const {searchItem} = useContext(SearchContext);
@@ -69,7 +70,7 @@ export const DashTresh = () => {
 
   useEffect(()=>{
     const fetchProducts = async()=>{
-      const products = await axios.get('/products');
+      const products = await axios.get(baseURL+'/products');
       setRows(products.data.filter((a)=> a.quantity <= a.tresh).slice(0, 11))
     }
     fetchProducts();
