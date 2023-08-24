@@ -116,7 +116,7 @@ const login = async(req, res, next) =>{
             {
                 httpOnly:true,
                 // signed: true,
-                // sameSite:'none'
+                sameSite:'none',
             }
             )
             .status(200).json({details:{...otherDetails}, isAdmin});

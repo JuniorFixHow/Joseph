@@ -23,7 +23,11 @@ mongoose.connection.on('disconnected', ()=>{
     console.log('Mongo is disconnected')
 })
 
-app.use(cors())
+app.use(cors({
+    origin:'https://kanbanshop.netlify.app/',
+    credentials:true
+}));
+app.set('trust proxy', 1);
 app.use(express.json());
 app.use(cookieParser())
 
