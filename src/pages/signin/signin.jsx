@@ -22,7 +22,6 @@ const Signin = () => {
       const data ={email, password};
       try {
         const res = await axios.post(baseURL+'/auths/login', data, {
-          headers: {"Content-Type":"application/json"},
           withCredentials:true,
         });
         // console.log(res)
