@@ -3,11 +3,11 @@ const { createOrder, updateOrder, deleteOrder, getAllOrders, getOrder, cancelOrd
 const { verifyAdmin } = require('../utils/verifyToken');
 const router = express.Router();
 
-router.post('/create', verifyAdmin, createOrder)
-router.put('/update', verifyAdmin, updateOrder);
-router.delete('/delete/:id', verifyAdmin, deleteOrder);
-router.post('/cancel', verifyAdmin, cancelOrder);
+router.post('/create',  createOrder)
+router.put('/update',  updateOrder);
+router.delete('/delete/:id',  deleteOrder);
+router.post('/cancel',  cancelOrder);
 router.get('/',  getAllOrders);
-router.get('/:id', verifyAdmin, getOrder);
+router.get('/:id', getOrder);
 
 module.exports =router;

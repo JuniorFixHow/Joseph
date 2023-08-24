@@ -3,10 +3,10 @@ const { createSale, updateSale, deleteSale, getAllSales, getSale } = require('..
 const { verifySeller, verifyUser } = require('../utils/verifyToken');
 const router = express.Router();
 
-router.post('/create', verifySeller, createSale)
-router.put('/update/:id', verifySeller, updateSale);
-router.delete('/delete/:id', verifySeller, deleteSale);
-router.get('/', verifyUser, getAllSales);
-router.get('/:id', verifyUser, getSale);
+router.post('/create',  createSale)
+router.put('/update/:id',  updateSale);
+router.delete('/delete/:id',  deleteSale);
+router.get('/',  getAllSales);
+router.get('/:id',  getSale);
 
 module.exports =router;

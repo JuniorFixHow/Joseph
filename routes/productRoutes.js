@@ -1,12 +1,12 @@
 const express = require('express');
 const { createProduct, updateProduct, deleteProduct, getAllProducts, getProduct } = require('../controllers/productControllers');
-const { verifyAdmin, verifyUser } = require('../utils/verifyToken');
+const {  verifyUser } = require('../utils/verifyToken');
 const router = express.Router();
 
-router.post('/create', verifyAdmin, createProduct)
-router.put('/update/:id', verifyAdmin, updateProduct);
-router.delete('/delete/:id', verifyAdmin, deleteProduct);
-router.get('/', verifyUser, getAllProducts);
-router.get('/:id', verifyUser, getProduct);
+router.post('/create',  createProduct)
+router.put('/update/:id',  updateProduct);
+router.delete('/delete/:id',  deleteProduct);
+router.get('/',  getAllProducts);
+router.get('/:id',  getProduct);
 
 module.exports =router;
